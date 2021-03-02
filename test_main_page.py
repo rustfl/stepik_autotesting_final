@@ -7,3 +7,4 @@ def test_guest_can_go_to_login_page(browser):
     page = MainPage(browser, link)
     page.open()
     page.should_bo_login_link()
+    page.go_to_login_page()
