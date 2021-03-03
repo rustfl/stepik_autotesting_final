@@ -1,13 +1,24 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators:
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    CART_BUTTON = (By.XPATH, "//div[contains(@class, 'basket-mini')]//a")
+
+
+class BasketPageLocators:
+    EMPTY_BASKET_TEXT = (By.XPATH, "//*[@id='content_inner']/p/a")
+    PRODUCT_LIST_FORM = (By.XPATH, "//form[@id='basket_formset']")
 
 
 class LoginPageLocators:
     LOGIN_FORM = (By.ID, "login_form")
     REGISTER_FORM = (By.ID, "register_form")
+
+
+class MainPageLocators:
+    pass
 
 
 class ProductPageLocators:
